@@ -1,0 +1,46 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+// Variables
+$background-light: #f7f7f2;
+$background-blue: #f2f2f7;
+
+$button-color: #2d4aed;
+
+$background-gradient: radial-gradient($background-light, $background-blue);
+
+$default-font: 'Nunito', sans-serif;
+
+// Mixins
+@mixin fullscreen {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin button($width, $height) {
+    width: $width;
+    height: $height;
+
+    background: rgba($button-color, 0.8);
+
+    cursor: pointer;
+
+    border: solid;
+    border-radius: 0.2em;
+    border-width: 1px;
+
+    transition-duration: 300ms;
+
+    line-height: $height;
+    text-align: center;
+
+    user-select: none;
+
+    &:hover {
+        background: rgba($button-color, 0.9)
+    }
+
+    &:active {
+        background: rgba($button-color, 1)
+    }
+}
